@@ -3,7 +3,7 @@
 > A strictly utilitarian, distraction-free text environment for thinkers, builders, and the noise-averse.
 
 [![Deploy to GitHub Pages](https://github.com/YOUR_GITHUB_USERNAME/YOUR_REPO_NAME/actions/workflows/deploy.yml/badge.svg)](https://nosaevsergei.github.io/nil-scratchpad/)
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/nosaevsergei/nil-scratchpad)
+
 
 NIL is a minimalist landing page and web application built with **Vanilla JS**, **Vite**, and **Tailwind CSS**. It is extremely lightweight, keeping the final production bundle size under **26 KB** (well under the 40KB budget), with zero heavy external dependencies.
 
