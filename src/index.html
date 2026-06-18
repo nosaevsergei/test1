@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>NIL_ | MINIMALIST TEXT SYSTEMS</title>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="/styles.css"/>
+</head>
+<body class="selection:bg-primary selection:text-on-primary min-h-screen bg-background text-primary">
+
+    <!-- LANDING PAGE VIEW -->
+    <div id="landing-page-view" class="w-full">
+        <!-- TopNavBar -->
+        <nav class="fixed top-0 w-full z-40 bg-background border-b border-primary flex justify-between items-center h-16 px-gutter max-w-full">
+            <div class="font-headline-md text-headline-md font-bold text-primary">NIL_</div>
+            <div class="hidden md:flex space-x-xl">
+                <a class="font-label-md text-label-md text-on-surface-variant hover:bg-primary hover:text-on-primary transition-colors duration-100 px-sm py-xs" href="#">[ DOCS ]</a>
+                <a class="font-label-md text-label-md text-on-surface-variant hover:bg-primary hover:text-on-primary transition-colors duration-100 px-sm py-xs" href="https://github.com">[ GITHUB ]</a>
+                <a class="font-label-md text-label-md text-on-surface-variant hover:bg-primary hover:text-on-primary transition-colors duration-100 px-sm py-xs" href="#">[ SOURCE ]</a>
+            </div>
+            <button class="launch-editor-trigger font-label-md text-label-md px-lg py-sm border border-primary hover:bg-primary hover:text-on-primary transition-all duration-75 active:border-2">
+                LOGIN
+            </button>
+        </nav>
+
+        <main class="pt-16">
+            <!-- HERO SECTION -->
+            <section class="min-h-[819px] flex flex-col md:flex-row border-b border-primary">
+                <div class="w-full md:w-1/2 p-xl flex flex-col justify-center border-b md:border-b-0 md:border-r border-primary">
+                    <div class="space-y-md">
+                        <div class="font-headline-lg text-headline-lg flex items-center">
+                            NIL_<span class="inline-block w-3 h-6 bg-primary ml-1 animate-pulse"></span>
+                        </div>
+                        <div class="font-label-md text-label-md opacity-70 tracking-widest">
+                            [ SYSTEM STATUS: READY ]
+                        </div>
+                        <p class="font-body-lg text-body-lg max-w-md mt-lg">
+                            A strictly utilitarian text environment for thinkers, builders, and the noise-averse. 
+                            No sync icons. No distraction. Just you and the buffer.
+                        </p>
+                        <div class="pt-xl flex gap-md">
+                            <button id="launch-editor-btn-hero" class="launch-editor-trigger px-xl py-md bg-primary text-on-primary font-bold hover:bg-white hover:text-black border border-primary transition-all">
+                                INITIALIZE_APP
+                            </button>
+                            <button class="px-xl py-md border border-primary font-bold hover:bg-primary hover:text-on-primary transition-all">
+                                READ_MANUAL
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full md:w-1/2 bg-surface-container p-gutter flex items-center justify-center overflow-hidden">
+                    <div class="w-full max-w-xl border border-primary bg-white">
+                        <div class="h-8 border-b border-primary px-md flex items-center justify-between bg-surface-container-high select-none">
+                            <span class="font-label-md text-label-md">[ nil//memory.md ]</span>
+                            <div class="flex gap-xs">
+                                <div class="w-3 h-3 border border-primary"></div>
+                                <div class="w-3 h-3 border border-primary bg-primary"></div>
+                            </div>
+                        </div>
+                        <div class="p-md font-mono text-sm leading-relaxed overflow-x-auto no-scrollbar min-h-[300px]">
+                            <pre class="text-primary"><code id="hero-terminal-code"></code></pre>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FEATURES GRID (2x2) -->
+            <section class="border-b border-primary">
+                <div class="grid grid-cols-1 md:grid-cols-2">
+                    <!-- 01 -->
+                    <div class="p-xl border-b border-primary md:border-r transition-all duration-0 hover:bg-black hover:text-white hover:border-white group select-none">
+                        <div class="font-headline-sm text-headline-sm mb-md transition-all duration-0">[ 01 // LOCAL_FIRST ]</div>
+                        <p class="font-body-md text-body-md text-on-surface-variant transition-all duration-0 group-hover:text-white">
+                            Data never leaves your machine unless you explicitly export it. Your thoughts are your own. No databases, no tracking, just filesystem-level integrity.
+                        </p>
+                    </div>
+                    <!-- 02 -->
+                    <div class="p-xl border-b border-primary transition-all duration-0 hover:bg-black hover:text-white hover:border-white group select-none">
+                        <div class="font-headline-sm text-headline-sm mb-md transition-all duration-0">[ 02 // ZERO_CLOUD ]</div>
+                        <p class="font-body-md text-body-md text-on-surface-variant transition-all duration-0 group-hover:text-white">
+                            We don't have servers for your content. We don't have accounts. We don't have a "cloud." We have a binary that runs on your silicon.
+                        </p>
+                    </div>
+                    <!-- 03 -->
+                    <div class="p-xl border-b md:border-b-0 border-primary md:border-r transition-all duration-0 hover:bg-black hover:text-white hover:border-white group select-none">
+                        <div class="font-headline-sm text-headline-sm mb-md transition-all duration-0">[ 03 // KEY_DRIVEN ]</div>
+                        <p class="font-body-md text-body-md text-on-surface-variant transition-all duration-0 group-hover:text-white">
+                            Put the mouse away. Navigate, edit, and organize via a comprehensive command palette and customizable hotkeys. Speed is a requirement, not a feature.
+                        </p>
+                    </div>
+                    <!-- 04 -->
+                    <div class="p-xl transition-all duration-0 hover:bg-black hover:text-white hover:border-white group select-none">
+                        <div class="font-headline-sm text-headline-sm mb-md transition-all duration-0">[ 04 // LIGHTWEIGHT ]</div>
+                        <p class="font-body-md text-body-md text-on-surface-variant transition-all duration-0 group-hover:text-white">
+                            Measured in kilobytes, not megabytes. NIL loads instantly and consumes negligible system resources, leaving more room for your ideas to breathe.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- LIVE PREVIEW SECTION -->
+            <section class="p-gutter md:p-2xl bg-white border-b border-primary">
+                <div class="max-w-5xl mx-auto border border-primary bg-white">
+                    <div class="h-10 border-b border-primary flex items-center px-md justify-between bg-surface-container-low select-none">
+                        <div class="flex items-center gap-md">
+                            <span class="font-label-md text-label-md">nil_session_001.txt</span>
+                            <span id="preview-badge" class="text-[10px] bg-primary text-on-primary px-1">STABLE</span>
+                        </div>
+                        <div class="flex items-center gap-sm">
+                            <span class="material-symbols-outlined text-sm cursor-pointer select-none">settings</span>
+                            <span class="material-symbols-outlined text-sm cursor-pointer select-none">terminal</span>
+                            <span class="material-symbols-outlined text-sm cursor-pointer select-none">close</span>
+                        </div>
+                    </div>
+                    <div class="flex h-[400px]">
+                        <!-- Gutter -->
+                        <div id="preview-gutter" class="w-12 border-r border-primary flex flex-col items-center pt-md font-mono text-[10px] text-outline select-none space-y-1 bg-surface-container-low overflow-hidden">
+                            <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>10</span><span>11</span><span>12</span>
+                        </div>
+                        <!-- Canvas -->
+                        <div id="preview-canvas" class="flex-1 p-md font-mono text-sm focus:outline-none overflow-y-auto no-scrollbar" contenteditable="true"># Welcome to the void.
+
+This is a live preview of the NIL buffer.
+Everything typed here remains in memory.
+
+- Markdown is supported.
+- Latency is nonexistent.
+- Focus is mandatory.
+
+_</div>
+                    </div>
+                    <!-- Status Bar -->
+                    <div class="h-8 border-t border-primary flex items-center justify-between px-md bg-surface-container-high font-label-md text-label-md select-none">
+                        <div class="flex gap-lg">
+                            <span id="preview-stats">L: 9 / C: 1</span>
+                            <span>UTF-8</span>
+                        </div>
+                        <div class="flex gap-lg">
+                            <span id="preview-mem-usage" class="text-on-surface-variant">[ MEM: 12.0KB / 512KB ]</span>
+                            <span class="font-bold">SYSTEM_READY</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CTAS / FOOTER -->
+            <footer class="flex flex-col w-full text-center select-none">
+                <!-- Massive Enter Button -->
+                <button id="launch-editor-btn-footer" class="launch-editor-trigger w-full py-2xl border-b border-primary text-headline-lg font-headline-lg transition-all duration-75 bg-transparent text-primary hover:bg-primary hover:text-on-primary flex items-center justify-center gap-md border-x-0">
+                    LAUNCH APP [ ENTER ] <span class="material-symbols-outlined">keyboard_return</span>
+                </button>
+                <div class="p-xl grid grid-cols-1 md:grid-cols-3 items-center gap-xl bg-background border-b border-primary">
+                    <div class="font-headline-lg text-headline-lg font-bold text-left">NIL_</div>
+                    <div class="flex justify-center gap-lg">
+                        <a class="font-label-md text-label-md hover:underline transition-all duration-0" href="#">STATUS</a>
+                        <a class="font-label-md text-label-md hover:underline transition-all duration-0" href="#">LICENSE</a>
+                        <a class="font-label-md text-label-md hover:underline transition-all duration-0" href="#">PRIVACY</a>
+                    </div>
+                    <div class="font-label-md text-label-md text-right opacity-60">
+                        (C) 2024 NIL_SYSTEMS. ALL RIGHTS RESERVED.
+                    </div>
+                </div>
+                <!-- Terminal Prompt Style Bottom -->
+                <div class="bg-primary text-on-primary p-md flex flex-wrap justify-between items-center font-mono text-[10px] tracking-widest uppercase">
+                    <div class="flex gap-md">
+                        <span>V.2.0.4-STABLE</span>
+                        <span>MD5: 098F6BCD4621D373CADE4E832627B4F6</span>
+                    </div>
+                    <div>
+                        BUILT_FOR_SILENCE
+                    </div>
+                </div>
+            </footer>
+        </main>
+    </div>
+
+    <!-- FULLSCREEN EDITOR VIEW -->
+    <div id="editor-view" class="hidden fixed inset-0 z-50 bg-background flex flex-col w-full h-full text-primary select-none opacity-0">
+        <!-- Editor Header -->
+        <header class="h-16 border-b border-primary flex justify-between items-center px-gutter bg-background w-full shrink-0">
+            <div class="font-headline-md text-headline-md font-bold select-none">NIL_ // EDITOR</div>
+            <div class="font-label-md text-label-md border border-primary px-md py-sm bg-white select-none">[ nil_buffer.md ]</div>
+            <button id="exit-editor-btn" class="font-label-md text-label-md px-lg py-sm border border-primary hover:bg-primary hover:text-on-primary transition-all duration-75 active:border-2">
+                [ ESC // EXIT ]
+            </button>
+        </header>
+
+        <!-- Editor Main Workspace -->
+        <div class="flex-1 flex overflow-hidden relative w-full bg-white">
+            <!-- Gutter for Line Numbers -->
+            <div id="editor-gutter" class="w-12 border-r border-primary flex flex-col items-center pt-md font-mono text-[11px] text-outline select-none space-y-1 bg-surface-container-low overflow-hidden">
+                <span>1</span>
+            </div>
+            <!-- Editor Textarea -->
+            <textarea id="editor-textarea" class="flex-1 p-md font-mono text-sm leading-relaxed resize-none focus:outline-none focus:ring-0 border-0 bg-transparent text-primary overflow-y-auto no-scrollbar" placeholder="# Welcome to your workspace. Start typing here..."></textarea>
+        </div>
+
+        <!-- Editor Footer Status Bar -->
+        <footer class="h-10 border-t border-primary flex items-center justify-between px-md bg-surface-container-high font-label-md text-label-md shrink-0 w-full select-none">
+            <div class="flex gap-lg">
+                <span id="editor-stats">CHARS: 0 / WORDS: 0 | L: 1 / C: 1</span>
+                <span>UTF-8</span>
+            </div>
+            <!-- Saving Notification Flash Area -->
+            <div class="flex-1 text-center font-bold text-primary transition-opacity duration-150 opacity-0" id="editor-save-indicator">
+                [ SAVED TO LOCAL_STORAGE ]
+            </div>
+            <div class="flex gap-lg">
+                <span id="editor-mem-usage">[ MEM: 0.000KB / 512KB ]</span>
+                <span class="font-bold text-green-700">SYSTEM_ACTIVE</span>
+            </div>
+        </footer>
+    </div>
+
+    <!-- MAIN LOGIC -->
+    <script type="module" src="/main.js"></script>
+</body>
+</html>
