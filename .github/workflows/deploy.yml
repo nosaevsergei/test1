@@ -34,7 +34,11 @@ jobs:
         run: npm ci
         
       - name: Build production bundle
-        run: npm run build
+        run: |
+          npm run build
+          npm run build --prefix balance
+          mkdir -p dist/balance
+          cp -r balance/dist/* dist/balance/
         
       - name: Setup Pages
         uses: actions/configure-pages@v4

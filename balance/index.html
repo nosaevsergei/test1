@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html class="dark" lang="ru">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Баланс — Умный контроль подписок и расходов</title>
+    <!-- Fonts and Material Symbols -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Geist:wght@400;500;700&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <!-- Link Stylesheet -->
+    <link rel="stylesheet" href="/src/style.css"/>
+</head>
+<body class="font-body-md selection:bg-brand-indigo/30 bg-[#09090B] text-[#E3E1EC] overflow-x-hidden">
+
+    <!-- TopNavBar -->
+    <nav id="navbar" class="fixed top-4 left-1/2 -translate-x-1/2 w-[calc(100%-32px)] max-w-container-max rounded-full bg-white/3 backdrop-blur-xl border border-white/10 shadow-[0_20px_40px_rgba(0,0,0,0.4)] z-50 flex justify-between items-center px-6 py-3 transition-all duration-300">
+        <div class="flex items-center gap-2">
+            <!-- Custom logo icon SVG -->
+            <div class="w-8 h-8 rounded-md bg-brand-indigo flex items-center justify-center text-white font-bold text-lg shadow-lg shadow-brand-indigo/30">Б</div>
+            <span class="font-headline-md text-headline-md font-bold text-on-surface">Баланс</span>
+        </div>
+        <div class="hidden md:flex items-center gap-8 font-label-md text-label-md">
+            <a class="text-on-surface/70 hover:text-on-surface transition-all duration-300" href="#features">Возможности</a>
+            <a class="text-on-surface/70 hover:text-on-surface transition-all duration-300" href="#how-it-works">Как это работает</a>
+            <a class="text-on-surface/70 hover:text-on-surface transition-all duration-300" href="#pricing">Тарифы</a>
+        </div>
+        <button class="cta-btn bg-brand-indigo text-white px-6 py-2 rounded-full font-label-md text-label-md hover:bg-brand-indigo/90 active:scale-95 transition-all duration-300">
+            Войти
+        </button>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative pt-40 pb-20 px-margin-mobile md:px-margin-desktop hero-gradient">
+        <div class="max-w-4xl mx-auto text-center">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-brand-emerald/20 bg-brand-emerald/5 text-brand-emerald mb-6">
+                <div class="status-dot"></div>
+                <span class="font-label-sm text-label-sm uppercase tracking-wider">Система активна</span>
+            </div>
+            <h1 class="font-headline-xl-mobile md:font-headline-xl text-headline-xl-mobile md:text-headline-xl mb-6 bg-gradient-to-b from-white to-zinc-400 bg-clip-text text-transparent">
+                Все подписки и регулярные расходы. В одном чистом интерфейсе.
+            </h1>
+            <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto mb-10">
+                Хватит платить за то, чем вы не пользуетесь. Баланс находит забытые списания и экономит до 30% вашего бюджета.
+            </p>
+            <button class="cta-btn btn-primary px-8 py-4 rounded-full font-headline-md text-label-md text-white mb-20 group inline-flex items-center justify-center">
+                Попробовать бесплатно
+                <span class="material-symbols-outlined ml-2 group-hover:translate-x-1 transition-transform">arrow_forward</span>
+            </button>
+        </div>
+
+        <!-- Interactive Mock Dashboard Simulation -->
+        <div class="max-w-container-max mx-auto">
+            <div class="glass-card p-1 overflow-hidden">
+                <div class="relative rounded-xl overflow-hidden aspect-video bg-zinc-950/40 p-4 md:p-6 flex flex-col md:flex-row gap-6 border border-white/5">
+                    
+                    <!-- Sidebar of Dashboard -->
+                    <div class="hidden md:flex flex-col w-56 border-r border-white/5 pr-4 gap-6 select-none">
+                        <div class="flex items-center gap-2">
+                            <div class="w-6 h-6 rounded bg-brand-indigo flex items-center justify-center text-white font-bold text-xs">Б</div>
+                            <span class="font-bold text-white text-sm">Баланс.Дэш</span>
+                        </div>
+                        <nav class="flex flex-col gap-1">
+                            <div class="flex items-center gap-3 px-3 py-2 rounded-lg bg-white/5 text-white font-medium text-xs cursor-pointer transition-all">
+                                <span class="material-symbols-outlined text-sm text-brand-indigo">dashboard</span>
+                                Обзор
+                            </div>
+                            <div class="flex items-center gap-3 px-3 py-2 rounded-lg text-white/50 hover:text-white hover:bg-white/3 font-medium text-xs cursor-pointer transition-all">
+                                <span class="material-symbols-outlined text-sm">payments</span>
+                                Подписки
+                            </div>
+                            <div class="flex items-center gap-3 px-3 py-2 rounded-lg text-white/50 hover:text-white hover:bg-white/3 font-medium text-xs cursor-pointer transition-all">
+                                <span class="material-symbols-outlined text-sm">query_stats</span>
+                                Статистика
+                            </div>
+                            <div class="flex items-center gap-3 px-3 py-2 rounded-lg text-white/50 hover:text-white hover:bg-white/3 font-medium text-xs cursor-pointer transition-all">
+                                <span class="material-symbols-outlined text-sm">settings</span>
+                                Настройки
+                            </div>
+                        </nav>
+                        <div class="mt-auto p-3 rounded-xl bg-brand-indigo/5 border border-brand-indigo/10 flex items-center gap-3">
+                            <div class="w-8 h-8 rounded-full bg-brand-indigo flex items-center justify-center font-bold text-sm">А</div>
+                            <div class="overflow-hidden">
+                                <p class="text-xs font-bold text-white truncate">Алекс М.</p>
+                                <p class="text-[10px] text-white/40 truncate">Тариф: Про</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Main Workspace Area -->
+                    <div class="flex-1 flex flex-col gap-6 overflow-hidden relative">
+                        <!-- Upper Metrics Row -->
+                        <div class="grid grid-cols-3 gap-4">
+                            <div class="bg-white/3 border border-white/5 p-4 rounded-xl">
+                                <p class="text-[10px] uppercase tracking-wider text-white/40 mb-1">Всего расходов</p>
+                                <p class="text-base md:text-xl font-bold text-white">1 596 ₽<span class="text-xs text-white/40 font-normal"> / мес</span></p>
+                            </div>
+                            <div class="bg-white/3 border border-white/5 p-4 rounded-xl">
+                                <p class="text-[10px] uppercase tracking-wider text-white/40 mb-1">Экономия</p>
+                                <p class="text-base md:text-xl font-bold text-brand-emerald">3 400 ₽<span class="text-[10px] text-brand-emerald/70 bg-brand-emerald/10 px-1.5 py-0.5 rounded-full ml-1 font-normal">-30%</span></p>
+                            </div>
+                            <div class="bg-white/3 border border-white/5 p-4 rounded-xl">
+                                <p class="text-[10px] uppercase tracking-wider text-white/40 mb-1">Активных услуг</p>
+                                <p class="text-base md:text-xl font-bold text-white">5 подписок</p>
+                            </div>
+                        </div>
+
+                        <!-- Interactive Line Chart Container -->
+                        <div class="flex-1 bg-white/3 border border-white/5 rounded-xl p-4 flex flex-col justify-between relative overflow-visible" id="chart-card">
+                            <div class="flex justify-between items-center mb-2">
+                                <h4 class="text-xs font-bold text-white">Расходы по месяцам (2026)</h4>
+                                <span class="text-[10px] text-white/40 font-label-md">Наведите на точки для деталей</span>
+                            </div>
+                            
+                            <!-- Custom Interactive Tooltip -->
+                            <div id="chart-tooltip" class="absolute hidden bg-zinc-950/90 border border-white/10 px-3 py-2 rounded-lg text-xs shadow-2xl z-10 pointer-events-none transform -translate-x-1/2 -translate-y-full transition-all duration-200">
+                                <p class="font-bold text-white" id="tooltip-month">Май</p>
+                                <p class="text-brand-indigo font-bold text-sm" id="tooltip-value">4 200 ₽</p>
+                            </div>
+
+                            <!-- SVG Chart -->
+                            <div class="w-full flex-1 relative overflow-visible py-2">
+                                <svg class="w-full h-full overflow-visible" viewBox="0 0 600 200" preserveAspectRatio="none">
+                                    <defs>
+                                        <!-- Gradient Fill Under Path -->
+                                        <linearGradient id="chart-area-grad" x1="0" y1="0" x2="0" y2="1">
+                                            <stop offset="0%" stop-color="#6366F1" stop-opacity="0.25"/>
+                                            <stop offset="100%" stop-color="#6366F1" stop-opacity="0.0"/>
+                                        </linearGradient>
+                                    </defs>
+                                    
+                                    <!-- Horizontal Grid Lines -->
+                                    <line x1="50" y1="50" x2="550" y2="50" stroke="rgba(255, 255, 255, 0.05)" stroke-dasharray="4" />
+                                    <line x1="50" y1="110" x2="550" y2="110" stroke="rgba(255, 255, 255, 0.05)" stroke-dasharray="4" />
+                                    <line x1="50" y1="160" x2="550" y2="160" stroke="rgba(255, 255, 255, 0.05)" stroke-dasharray="4" />
+
+                                    <!-- Fill Path (Under Line) -->
+                                    <path d="M 50 150 L 150 110 L 250 130 L 350 60 L 450 90 L 550 100 L 550 190 L 50 190 Z" fill="url(#chart-area-grad)" />
+
+                                    <!-- Line Path -->
+                                    <path class="chart-line" d="M 50 150 L 150 110 L 250 130 L 350 60 L 450 90 L 550 100" fill="none" stroke="#6366F1" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+                                    
+                                    <!-- Hoverable Data Points -->
+                                    <circle cx="50" cy="150" r="5" fill="#6366F1" stroke="#FFFFFF" stroke-width="2" class="chart-point cursor-pointer transition-all duration-200 hover:r-8 hover:fill-brand-emerald" data-value="2 100 ₽" data-month="Январь" />
+                                    <circle cx="150" cy="110" r="5" fill="#6366F1" stroke="#FFFFFF" stroke-width="2" class="chart-point cursor-pointer transition-all duration-200 hover:r-8 hover:fill-brand-emerald" data-value="3 400 ₽" data-month="Февраль" />
+                                    <circle cx="250" cy="130" r="5" fill="#6366F1" stroke="#FFFFFF" stroke-width="2" class="chart-point cursor-pointer transition-all duration-200 hover:r-8 hover:fill-brand-emerald" data-value="2 900 ₽" data-month="Март" />
+                                    <circle cx="350" cy="60" r="5" fill="#6366F1" stroke="#FFFFFF" stroke-width="2" class="chart-point cursor-pointer transition-all duration-200 hover:r-8 hover:fill-brand-emerald" data-value="5 100 ₽" data-month="Апрель" />
+                                    <circle cx="450" cy="90" r="5" fill="#6366F1" stroke="#FFFFFF" stroke-width="2" class="chart-point cursor-pointer transition-all duration-200 hover:r-8 hover:fill-brand-emerald" data-value="4 200 ₽" data-month="Май" />
+                                    <circle cx="550" cy="100" r="5" fill="#6366F1" stroke="#FFFFFF" stroke-width="2" class="chart-point cursor-pointer transition-all duration-200 hover:r-8 hover:fill-brand-emerald" data-value="3 800 ₽" data-month="Июнь" />
+                                </svg>
+                            </div>
+                            
+                            <!-- X Axis Labels -->
+                            <div class="flex justify-between px-[35px] text-[10px] text-white/40 select-none">
+                                <span>Янв</span>
+                                <span>Фев</span>
+                                <span>Мар</span>
+                                <span>Апр</span>
+                                <span>Май</span>
+                                <span>Июн</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Ambient glow layer -->
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#09090B] via-transparent to-transparent opacity-40 pointer-events-none"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bento Grid Features Section -->
+    <section class="py-24 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto" id="features">
+        <div class="mb-16">
+            <h2 class="font-headline-lg text-headline-lg mb-4">Управляйте деньгами осознанно</h2>
+            <p class="text-on-surface-variant">Технологии, которые работают на ваш капитал.</p>
+        </div>
+        <div class="bento-grid">
+            
+            <!-- Card 1: Interactive Expense Calculator (Large) -->
+            <div class="col-span-12 lg:col-span-8 glass-card p-8 flex flex-col justify-between min-h-[440px]">
+                <div>
+                    <h3 class="font-headline-md text-headline-md mb-2">Калькулятор трат</h3>
+                    <p class="text-on-surface-variant mb-6">Оцените реальную стоимость вашего цифрового образа жизни в год.</p>
+                    
+                    <!-- Checkboxes Grid -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-2xl" id="calculator-checkboxes">
+                        <label class="flex items-center justify-between p-4 rounded-xl bg-white/5 border border-white/5 cursor-pointer hover:bg-white/10 hover:border-white/10 transition-all select-none">
+                            <div class="flex items-center gap-3">
+                                <span class="material-symbols-outlined text-brand-indigo text-lg">circle_notifications</span>
+                                <span class="font-body-md text-body-md text-white">Яндекс Плюс</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <span class="text-brand-emerald text-sm font-semibold">299 ₽/мес</span>
+                                <input type="checkbox" value="299" checked class="rounded border-white/10 bg-white/5 text-brand-indigo focus:ring-brand-indigo w-4 h-4 transition-all"/>
+                            </div>
+                        </label>
+                        <label class="flex items-center justify-between p-4 rounded-xl bg-white/5 border border-white/5 cursor-pointer hover:bg-white/10 hover:border-white/10 transition-all select-none">
+                            <div class="flex items-center gap-3">
+                                <span class="material-symbols-outlined text-brand-indigo text-lg">verified_user</span>
+                                <span class="font-body-md text-body-md text-white">Telegram Premium</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <span class="text-brand-emerald text-sm font-semibold">299 ₽/мес</span>
+                                <input type="checkbox" value="299" checked class="rounded border-white/10 bg-white/5 text-brand-indigo focus:ring-brand-indigo w-4 h-4 transition-all"/>
+                            </div>
+                        </label>
+                        <label class="flex items-center justify-between p-4 rounded-xl bg-white/5 border border-white/5 cursor-pointer hover:bg-white/10 hover:border-white/10 transition-all select-none">
+                            <div class="flex items-center gap-3">
+                                <span class="material-symbols-outlined text-brand-indigo text-lg">movie</span>
+                                <span class="font-body-md text-body-md text-white">Онлайн-кинотеатр</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <span class="text-brand-emerald text-sm font-semibold">399 ₽/мес</span>
+                                <input type="checkbox" value="399" class="rounded border-white/10 bg-white/5 text-brand-indigo focus:ring-brand-indigo w-4 h-4 transition-all"/>
+                            </div>
+                        </label>
+                        <label class="flex items-center justify-between p-4 rounded-xl bg-white/5 border border-white/5 cursor-pointer hover:bg-white/10 hover:border-white/10 transition-all select-none">
+                            <div class="flex items-center gap-3">
+                                <span class="material-symbols-outlined text-brand-indigo text-lg">music_note</span>
+                                <span class="font-body-md text-body-md text-white">Музыкальный стриминг</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <span class="text-brand-emerald text-sm font-semibold">199 ₽/мес</span>
+                                <input type="checkbox" value="199" class="rounded border-white/10 bg-white/5 text-brand-indigo focus:ring-brand-indigo w-4 h-4 transition-all"/>
+                            </div>
+                        </label>
+                        <label class="flex items-center justify-between p-4 rounded-xl bg-white/5 border border-white/5 cursor-pointer hover:bg-white/10 hover:border-white/10 transition-all select-none md:col-span-2">
+                            <div class="flex items-center gap-3">
+                                <span class="material-symbols-outlined text-brand-indigo text-lg">vpn_lock</span>
+                                <span class="font-body-md text-body-md text-white">Зарубежный VPN</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <span class="text-brand-emerald text-sm font-semibold">400 ₽/мес</span>
+                                <input type="checkbox" value="400" checked class="rounded border-white/10 bg-white/5 text-brand-indigo focus:ring-brand-indigo w-4 h-4 transition-all"/>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+                <div class="mt-8 pt-6 border-t border-white/5 flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+                    <span class="text-on-surface-variant font-label-md text-label-md uppercase tracking-wider">Прогноз на 12 месяцев</span>
+                    <span class="font-headline-md text-headline-md text-white">Итого в год: <span id="calc-total-annual" class="text-brand-emerald font-bold transition-all duration-300">0 ₽</span></span>
+                </div>
+            </div>
+
+            <!-- Card 2: Notifications (Medium) -->
+            <div class="col-span-12 md:col-span-6 lg:col-span-4 glass-card p-8 flex flex-col gap-6 justify-between min-h-[400px]">
+                <div>
+                    <h3 class="font-headline-md text-headline-md mb-2">Умные уведомления</h3>
+                    <p class="text-on-surface-variant">Предупреждаем о списаниях заранее.</p>
+                </div>
+                
+                <!-- Mock Phone Notification Card Overlay -->
+                <div class="relative w-full overflow-hidden select-none">
+                    <div class="bg-zinc-900/80 backdrop-blur-md rounded-2xl p-4 border border-white/10 shadow-2xl relative">
+                        <div class="flex items-center justify-between mb-2">
+                            <div class="flex items-center gap-2">
+                                <div class="w-6 h-6 rounded bg-brand-indigo flex items-center justify-center">
+                                    <span class="material-symbols-outlined text-xs text-white">account_balance_wallet</span>
+                                </div>
+                                <span class="text-[12px] font-bold text-white">Баланс</span>
+                            </div>
+                            <span class="text-[10px] text-white/40">сейчас</span>
+                        </div>
+                        <p class="text-xs text-white/90 mb-3">Завтра спишется 400 ₽ за VPN Сервис. Отменить списание?</p>
+                        <div class="flex gap-2">
+                            <button class="cta-btn flex-1 py-1.5 bg-white/5 hover:bg-white/10 rounded-lg text-[10px] font-bold text-white transition-all">Оставить</button>
+                            <button class="cta-btn flex-1 py-1.5 bg-brand-indigo hover:bg-brand-indigo/90 rounded-lg text-[10px] font-bold text-white transition-all">Отменить</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3: Security (Small/Medium fallback) -->
+            <div class="col-span-12 md:col-span-6 lg:col-span-4 glass-card p-8 flex flex-col justify-between">
+                <div>
+                    <div class="w-12 h-12 rounded-xl bg-brand-emerald/10 flex items-center justify-center mb-6 border border-brand-emerald/20">
+                        <span class="material-symbols-outlined text-brand-emerald" style="font-variation-settings: 'FILL' 1;">lock</span>
+                    </div>
+                    <h3 class="font-headline-md text-headline-md mb-2">Безопасность данных</h3>
+                    <p class="text-on-surface-variant mb-6">Ваши банковские выписки защищены шифрованием по протоколу AES-256.</p>
+                </div>
+                <div class="flex items-center gap-2 px-3 py-1 rounded-full bg-brand-emerald/5 border border-brand-emerald/20 inline-block w-fit">
+                    <span class="text-brand-emerald font-label-sm text-label-sm uppercase tracking-wider font-bold">ENCRYPTION GRADE AAA+</span>
+                </div>
+            </div>
+
+            <!-- Card 4: Automatic Discovery -->
+            <div class="col-span-12 lg:col-span-8 glass-card p-8 flex flex-col sm:flex-row items-center gap-8 justify-between">
+                <div class="flex-1">
+                    <h3 class="font-headline-md text-headline-md mb-2">Автоматический поиск</h3>
+                    <p class="text-on-surface-variant">Просто подключите свои карты, и наш ИИ найдет скрытые подписки за последние 12 месяцев.</p>
+                </div>
+                <div class="grid grid-cols-3 gap-3 shrink-0">
+                    <div class="w-16 h-16 rounded-2xl bg-white/5 border border-white/5 flex items-center justify-center hover:border-white/20 hover:bg-white/10 transition-all">
+                        <span class="material-symbols-outlined text-3xl opacity-40 text-white">credit_card</span>
+                    </div>
+                    <div class="w-16 h-16 rounded-2xl bg-white/5 border border-brand-indigo/30 flex items-center justify-center hover:bg-white/10 transition-all shadow-[0_0_15px_rgba(99,102,241,0.2)]">
+                        <span class="material-symbols-outlined text-3xl text-brand-indigo">search</span>
+                    </div>
+                    <div class="w-16 h-16 rounded-2xl bg-white/5 border border-white/5 flex items-center justify-center hover:border-white/20 hover:bg-white/10 transition-all">
+                        <span class="material-symbols-outlined text-3xl opacity-40 text-white">verified</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="py-24 px-margin-mobile md:px-margin-desktop bg-surface-container-lowest/50 border-t border-b border-white/5" id="how-it-works">
+        <div class="max-w-container-max mx-auto">
+            <div class="text-center mb-20">
+                <h2 class="font-headline-lg text-headline-lg mb-4">Три шага к финансовой свободе</h2>
+                <p class="text-on-surface-variant">Управление подписками еще никогда не было таким прозрачным.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+                <div class="relative group">
+                    <div class="font-headline-xl text-brand-indigo opacity-20 absolute -top-12 -left-4 select-none group-hover:scale-110 group-hover:opacity-30 transition-all duration-300">01</div>
+                    <div class="relative z-10">
+                        <h3 class="font-headline-md text-headline-md mb-4 text-white">Подключите карты</h3>
+                        <p class="text-on-surface-variant leading-relaxed">Безопасное соединение через шифрованные шлюзы крупнейших банков России. Никаких паролей.</p>
+                    </div>
+                </div>
+                <div class="relative group">
+                    <div class="font-headline-xl text-brand-indigo opacity-20 absolute -top-12 -left-4 select-none group-hover:scale-110 group-hover:opacity-30 transition-all duration-300">02</div>
+                    <div class="relative z-10">
+                        <h3 class="font-headline-md text-headline-md mb-4 text-white">Найдите скрытое</h3>
+                        <p class="text-on-surface-variant leading-relaxed">Наш ИИ проанализирует списания за прошлый год, группируя и подсвечивая скрытые комиссии и автопродления.</p>
+                    </div>
+                </div>
+                <div class="relative group">
+                    <div class="font-headline-xl text-brand-indigo opacity-20 absolute -top-12 -left-4 select-none group-hover:scale-110 group-hover:opacity-30 transition-all duration-300">03</div>
+                    <div class="relative z-10">
+                        <h3 class="font-headline-md text-headline-md mb-4 text-white">Управляйте всем</h3>
+                        <p class="text-on-surface-variant leading-relaxed">Отменяйте подписки прямо из личного кабинета, получайте алерты и планируйте свои регулярные траты.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="py-24 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto" id="pricing">
+        <div class="text-center mb-6">
+            <h2 class="font-headline-lg text-headline-lg mb-4">Тарифные планы</h2>
+            <p class="text-on-surface-variant mb-8">Выберите свой уровень контроля бюджета.</p>
+        </div>
+
+        <!-- Monthly/Annual Pricing Switch -->
+        <div class="flex items-center justify-center gap-4 mb-12">
+            <span class="font-label-md text-label-md text-white" id="billing-monthly-text">Ежемесячно</span>
+            <button id="billing-toggle" aria-label="Toggle pricing mode" class="w-12 h-6 rounded-full bg-white/10 p-1 flex items-center transition-all duration-300 relative focus:outline-none">
+                <div id="billing-toggle-knob" class="w-4 h-4 rounded-full bg-brand-indigo transition-all duration-300 translate-x-0"></div>
+            </button>
+            <span class="font-label-md text-label-md text-on-surface-variant" id="billing-annual-text">
+                Ежегодно <span class="text-brand-emerald text-xs bg-brand-emerald/10 px-2 py-0.5 rounded-full ml-1 font-bold">-20%</span>
+            </span>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <!-- Basic Plan -->
+            <div class="glass-card p-10 flex flex-col justify-between">
+                <div>
+                    <div class="mb-8">
+                        <h3 class="font-headline-md text-headline-md mb-2 text-white">Базовый</h3>
+                        <div class="flex items-baseline gap-1">
+                            <span class="font-headline-lg text-headline-lg text-white">0 ₽</span>
+                            <span class="text-on-surface-variant text-sm">/ мес</span>
+                        </div>
+                        <p class="text-[11px] text-white/30 mt-1">Всегда бесплатный старт</p>
+                    </div>
+                    <ul class="space-y-4 mb-10">
+                        <li class="flex items-center gap-3">
+                            <span class="material-symbols-outlined text-brand-emerald">check_circle</span>
+                            <span class="text-on-surface-variant font-body-md text-sm">Подключение 1 карты</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span class="material-symbols-outlined text-brand-emerald">check_circle</span>
+                            <span class="text-on-surface-variant font-body-md text-sm">Поиск активных подписок</span>
+                        </li>
+                        <li class="flex items-center gap-3 opacity-30">
+                            <span class="material-symbols-outlined">cancel</span>
+                            <span class="text-on-surface-variant font-body-md text-sm">Умные уведомления в Telegram</span>
+                        </li>
+                    </ul>
+                </div>
+                <button class="cta-btn btn-secondary w-full py-4 rounded-xl font-label-md text-label-md text-white font-bold hover:scale-[1.02] active:scale-95 transition-all">
+                    Начать бесплатно
+                </button>
+            </div>
+            
+            <!-- Pro Plan -->
+            <div class="glass-card p-10 flex flex-col justify-between border-brand-indigo/50 bg-brand-indigo/5 relative overflow-hidden">
+                <div class="absolute top-4 right-4 bg-brand-indigo text-white px-3 py-1 rounded-full font-label-sm text-label-sm uppercase tracking-wider font-bold">ПОПУЛЯРНО</div>
+                <div>
+                    <div class="mb-8">
+                        <h3 class="font-headline-md text-headline-md mb-2 text-white font-bold">Про</h3>
+                        <div class="flex items-baseline gap-1">
+                            <span id="pro-price" class="font-headline-lg text-headline-lg text-white transition-all duration-300">199 ₽</span>
+                            <span class="text-on-surface-variant text-sm">/ мес</span>
+                        </div>
+                        <p id="pro-subtext" class="text-[11px] text-white/30 mt-1 opacity-0 transition-opacity duration-300">Списание раз в год (1 908 ₽)</p>
+                    </div>
+                    <ul class="space-y-4 mb-10">
+                        <li class="flex items-center gap-3">
+                            <span class="material-symbols-outlined text-brand-emerald">check_circle</span>
+                            <span class="text-on-surface font-body-md text-sm font-medium">Безлимитные карты</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span class="material-symbols-outlined text-brand-emerald">check_circle</span>
+                            <span class="text-on-surface font-body-md text-sm font-medium">Умные уведомления в Telegram</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span class="material-symbols-outlined text-brand-emerald">check_circle</span>
+                            <span class="text-on-surface font-body-md text-sm font-medium">Отмена подписок одной кнопкой</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span class="material-symbols-outlined text-brand-emerald">check_circle</span>
+                            <span class="text-on-surface font-body-md text-sm font-medium">Расширенная аналитика ИИ</span>
+                        </li>
+                    </ul>
+                </div>
+                <button class="cta-btn btn-primary w-full py-4 rounded-xl font-label-md text-label-md text-white font-bold hover:scale-[1.02] active:scale-95 transition-all">
+                    Активировать Про
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="mesh-footer pt-32 pb-16 border-t border-white/10">
+        <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop text-center md:text-left">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-12 mb-20">
+                <div class="max-w-xl">
+                    <h2 class="font-headline-lg text-headline-lg mb-6">Начните контролировать свой бюджет уже сегодня.</h2>
+                    <button class="cta-btn btn-primary px-8 py-4 rounded-full font-label-md text-label-md text-white font-bold hover:scale-105 active:scale-95 transition-all">
+                        Попробовать бесплатно
+                    </button>
+                </div>
+                <div class="flex items-center gap-2">
+                    <div class="w-12 h-12 rounded-xl bg-brand-indigo flex items-center justify-center text-white font-bold text-2xl shadow-lg">Б</div>
+                    <span class="font-headline-md text-headline-md font-bold text-on-surface">Баланс</span>
+                </div>
+            </div>
+            <div class="flex flex-col md:flex-row justify-between items-center gap-8 py-8 border-t border-white/5 font-body-md text-body-md text-on-surface-variant">
+                <p>© 2026 Баланс. Все права защищены.</p>
+                <div class="flex gap-8">
+                    <a class="hover:text-white transition-colors" href="#">Конфиденциальность</a>
+                    <a class="hover:text-white transition-colors" href="#">Условия использования</a>
+                    <a class="hover:text-white transition-colors" href="#">Поддержка</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Sleek Closed Beta Access Modal System -->
+    <div id="beta-modal" class="fixed inset-0 z-[100] hidden items-center justify-center px-4">
+        <!-- Blur Backdrop overlay -->
+        <div class="absolute inset-0 bg-black/70 backdrop-blur-md opacity-0 modal-overlay" id="modal-backdrop"></div>
+        
+        <!-- Modal Content Container -->
+        <div class="glass-card max-w-md w-full bg-zinc-950/80 p-8 border border-white/10 shadow-2xl relative z-10 modal-content scale-90 opacity-0 transition-all duration-300">
+            <button id="modal-close" class="absolute top-4 right-4 text-on-surface-variant hover:text-white transition-colors flex items-center justify-center w-8 h-8 rounded-full hover:bg-white/5" aria-label="Close modal">
+                <span class="material-symbols-outlined">close</span>
+            </button>
+            
+            <div id="beta-content">
+                <h3 class="font-headline-md text-headline-md text-white mb-3">Проект в стадии закрытого тестирования</h3>
+                <p class="text-on-surface-variant text-body-md mb-6 leading-relaxed">
+                    Спасибо за интерес к Балансу! Сейчас мы проводим закрытый запуск для первых пользователей. Оставьте ваш email, чтобы получить инвайт в следующей волне.
+                </p>
+                <form id="beta-form" class="space-y-4">
+                    <div>
+                        <input type="email" id="beta-email" placeholder="Ваш email" required class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-indigo focus:ring-2 focus:ring-brand-indigo/20 transition-all placeholder:text-on-surface-variant/50" />
+                    </div>
+                    <button type="submit" class="btn-primary w-full py-3.5 rounded-xl font-label-md text-label-md text-white font-bold flex items-center justify-center gap-2">
+                        Получить доступ
+                        <span class="material-symbols-outlined text-sm">send</span>
+                    </button>
+                </form>
+            </div>
+            
+            <!-- Success Confirmation Screen -->
+            <div id="beta-success" class="hidden text-center py-6">
+                <div class="w-16 h-16 bg-brand-emerald/10 border border-brand-emerald/20 text-brand-emerald rounded-full flex items-center justify-center mx-auto mb-4">
+                    <span class="material-symbols-outlined text-3xl font-bold">check</span>
+                </div>
+                <h4 class="font-headline-md text-headline-md text-white mb-2">✓ Успешно</h4>
+                <p class="text-on-surface-variant text-body-md">Ваш адрес сохранен. Мы отправим приглашение, как только откроем следующую волну!</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Script Entrypoint -->
+    <script type="module" src="/src/main.js"></script>
+</body>
+</html>

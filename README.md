@@ -1,9 +1,25 @@
-# NIL_ 
+# Multi-Site Workspace
 
-> A strictly utilitarian, distraction-free text environment for thinkers, builders, and the noise-averse.
+This repository hosts two frontend projects:
+1. **NIL_ (Root)**: A strictly utilitarian, distraction-free text environment for thinkers and builders.
+   - 🌐 **Live Demo (NIL)**: [https://nosaevsergei.github.io/test1/](https://nosaevsergei.github.io/test1/)
+2. **Баланс (Subfolder: `/balance`)**: A premium marketing landing page for an smart subscription and expense tracker.
+   - 🌐 **Live Demo (Баланс)**: [https://nosaevsergei.github.io/test1/balance/](https://nosaevsergei.github.io/test1/balance/)
 
-[![Deploy to GitHub Pages](https://github.com/YOUR_GITHUB_USERNAME/YOUR_REPO_NAME/actions/workflows/deploy.yml/badge.svg)](https://nosaevsergei.github.io/nil-scratchpad/)
+---
 
+## ⚙️ GitHub Pages Deployment Configuration
+
+To host both sites on GitHub Pages, follow these configuration steps:
+
+1. **Enable GitHub Pages**:
+   - Go to your repository settings on GitHub: **Settings -> Pages**.
+   - Under **Build and deployment -> Source**, select **GitHub Actions** (instead of "Deploy from a branch").
+2. **Push Changes**:
+   - Pushing code to the `main` branch automatically triggers the `Deploy to GitHub Pages` workflow.
+   - The workflow compiles the root NIL project and the `/balance` subproject, copies the balance build into the nested folder, and deploys both to your GitHub Pages website.
+
+---
 
 NIL is a minimalist landing page and web application built with **Vanilla JS**, **Vite**, and **Tailwind CSS**. It is extremely lightweight, keeping the final production bundle size under **26 KB** (well under the 40KB budget), with zero heavy external dependencies.
 
