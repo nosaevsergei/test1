@@ -1,23 +1,29 @@
 # Multi-Site Workspace
 
-This repository hosts two frontend projects:
-1. **NIL_ (Root)**: A strictly utilitarian, distraction-free text environment for thinkers and builders.
-   - 🌐 **Live Demo (NIL)**: [https://nosaevsergei.github.io/test1/](https://nosaevsergei.github.io/test1/)
-2. **Баланс (Subfolder: `/balance`)**: A premium marketing landing page for an smart subscription and expense tracker.
-   - 🌐 **Live Demo (Баланс)**: [https://nosaevsergei.github.io/test1/balance/](https://nosaevsergei.github.io/test1/balance/)
+This repository hosts three frontend projects under a unified portal:
+- 🌐 **Main Portal**: [https://nosaevsergei.github.io/test1/](https://nosaevsergei.github.io/test1/)
+
+## 🚀 Projects Included:
+
+1. **СИНАПС (Subfolder: `/synapse`)**: A cyber-minimalistic AI connection and automation platform landing page.
+   - 🌐 **Live Demo**: [https://nosaevsergei.github.io/test1/synapse/](https://nosaevsergei.github.io/test1/synapse/)
+2. **Баланс (Subfolder: `/balance`)**: A premium marketing landing page for a smart subscription and expense tracker.
+   - 🌐 **Live Demo**: [https://nosaevsergei.github.io/test1/balance/](https://nosaevsergei.github.io/test1/balance/)
+3. **NIL_ (Subfolder: `/nil`)**: A strictly utilitarian, distraction-free text environment for thinkers and builders.
+   - 🌐 **Live Demo**: [https://nosaevsergei.github.io/test1/nil/](https://nosaevsergei.github.io/test1/nil/)
 
 ---
 
 ## ⚙️ GitHub Pages Deployment Configuration
 
-To host both sites on GitHub Pages, follow these configuration steps:
+To host all three sites on GitHub Pages, follow these configuration steps:
 
 1. **Enable GitHub Pages**:
    - Go to your repository settings on GitHub: **Settings -> Pages**.
    - Under **Build and deployment -> Source**, select **GitHub Actions** (instead of "Deploy from a branch").
 2. **Push Changes**:
    - Pushing code to the `main` branch automatically triggers the `Deploy to GitHub Pages` workflow.
-   - The workflow compiles the root NIL project and the `/balance` subproject, copies the balance build into the nested folder, and deploys both to your GitHub Pages website.
+   - The workflow installs dependencies and compiles the `/nil`, `/balance`, and `/synapse` projects, bundles them into nested directories inside the `dist/` directory, copies the root portal `index.html`, and deploys everything to your GitHub Pages site.
 
 ---
 

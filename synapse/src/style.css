@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    background-color: #050507;
+    color: #dee3e6;
+    overflow-x: hidden;
+}
+
+.dot-grid {
+    position: relative;
+    background-image: 
+        radial-gradient(circle at var(--glow-x, 50%) var(--glow-y, 50%), rgba(6, 182, 212, 0.15) 0%, transparent 60%),
+        radial-gradient(rgba(76, 215, 246, 0.12) 1px, transparent 0);
+    background-size: 100% 100%, 32px 32px;
+    background-repeat: no-repeat, repeat;
+    background-attachment: scroll;
+}
+
+.cyber-glow {
+    box-shadow: 0 0 20px rgba(6, 182, 212, 0.15);
+}
+
+.gradient-text {
+    background: linear-gradient(135deg, #4cd7f6 0%, #d0bcff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.glass-panel {
+    background: rgba(14, 20, 22, 0.7);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.pulse-animation {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: .5; transform: scale(1.1); }
+}
+
+.scanline {
+    height: 2px;
+    background: linear-gradient(to right, transparent, #4cd7f6, transparent);
+    position: absolute;
+    width: 100%;
+    top: -100%;
+    animation: scan 3s linear infinite;
+}
+
+@keyframes scan {
+    0% { top: 0%; }
+    100% { top: 100%; }
+}
+
+/* Custom styles for select option override in dark theme */
+.select-custom option {
+    background-color: #0e1416;
+    color: #dee3e6;
+}
+
+/* Custom cursor tracker container style */
+#custom-scanner-cursor {
+    box-shadow: 0 0 15px rgba(6, 182, 212, 0.25);
+    border: 1px solid rgba(76, 215, 246, 0.4);
+    background: rgba(14, 20, 22, 0.9);
+}

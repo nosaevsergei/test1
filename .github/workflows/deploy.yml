@@ -31,14 +31,24 @@ jobs:
           cache: npm
           
       - name: Install dependencies
-        run: npm ci
-        
+        run: |
+          npm ci --prefix nil
+          npm ci --prefix balance
+          npm ci --prefix synapse
+          
       - name: Build production bundle
         run: |
-          npm run build
+          npm run build --prefix nil
           npm run build --prefix balance
+          npm run build --prefix synapse
+          mkdir -p dist
+          mkdir -p dist/nil
+          cp -r nil/dist/* dist/nil/
           mkdir -p dist/balance
           cp -r balance/dist/* dist/balance/
+          mkdir -p dist/synapse
+          cp -r synapse/dist/* dist/synapse/
+          cp index.html dist/index.html
         
       - name: Setup Pages
         uses: actions/configure-pages@v4
