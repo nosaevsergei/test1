@@ -1,6 +1,6 @@
 # Multi-Site Workspace
 
-This repository hosts three frontend projects under a unified portal:
+This repository hosts six frontend projects under a unified portal:
 - 🌐 **Main Portal**: [https://nosaevsergei.github.io/test1/](https://nosaevsergei.github.io/test1/)
 
 ## 🚀 Projects Included:
@@ -11,19 +11,25 @@ This repository hosts three frontend projects under a unified portal:
    - 🌐 **Live Demo**: [https://nosaevsergei.github.io/test1/balance/](https://nosaevsergei.github.io/test1/balance/)
 3. **NIL_ (Subfolder: `/nil`)**: A strictly utilitarian, distraction-free text environment for thinkers and builders.
    - 🌐 **Live Demo**: [https://nosaevsergei.github.io/test1/nil/](https://nosaevsergei.github.io/test1/nil/)
+4. **КОНТУР (Subfolder: `/kontur`)**: A premium light-mode architectural website portfolio.
+   - 🌐 **Live Demo**: [https://nosaevsergei.github.io/test1/kontur/](https://nosaevsergei.github.io/test1/kontur/)
+5. **КЛАСТЕР (Subfolder: `/cluster`)**: A vibrant, pop-brutalist interactive task manager and dashboard.
+   - 🌐 **Live Demo**: [https://nosaevsergei.github.io/test1/cluster/](https://nosaevsergei.github.io/test1/cluster/)
+6. **СПЕКТР (Subfolder: `/spectr`)**: A premium hardware landing page. Dynamic Web Audio switch sound synthesizer, scroll-driven anatomy exploded view, and light presets customizer.
+   - 🌐 **Live Demo**: [https://nosaevsergei.github.io/test1/spectr/](https://nosaevsergei.github.io/test1/spectr/)
 
 ---
 
 ## ⚙️ GitHub Pages Deployment Configuration
 
-To host all three sites on GitHub Pages, follow these configuration steps:
+To host all six sites on GitHub Pages, follow these configuration steps:
 
 1. **Enable GitHub Pages**:
    - Go to your repository settings on GitHub: **Settings -> Pages**.
    - Under **Build and deployment -> Source**, select **GitHub Actions** (instead of "Deploy from a branch").
 2. **Push Changes**:
    - Pushing code to the `main` branch automatically triggers the `Deploy to GitHub Pages` workflow.
-   - The workflow installs dependencies and compiles the `/nil`, `/balance`, and `/synapse` projects, bundles them into nested directories inside the `dist/` directory, copies the root portal `index.html`, and deploys everything to your GitHub Pages site.
+   - The workflow installs dependencies and compiles the `/nil`, `/balance`, `/synapse`, `/kontur`, `/cluster`, and `/spectr` projects, bundles them into nested directories inside the `dist/` directory, copies the root portal `index.html`, and deploys everything to your GitHub Pages site.
 
 ---
 

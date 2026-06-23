@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html class="light" lang="ru">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>КОНТУР | Архитектурные Формы</title>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&amp;family=Geist:wght@100..900&amp;display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="/src/style.css"/>
+</head>
+<body class="font-body-md overflow-x-hidden">
+    <!-- TopNavBar -->
+    <nav class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-margin-edge h-20 bg-background/90 backdrop-blur-md border-b border-on-background/10">
+        <div class="font-headline-sm text-headline-sm font-bold tracking-tighter text-primary">КОНТУР</div>
+        <div class="hidden md:flex gap-10">
+            <a class="font-label-caps text-label-caps uppercase tracking-widest text-primary border-b border-primary pb-1" href="#configurator">КОНФИГУРАТОР</a>
+            <a class="font-label-caps text-label-caps uppercase tracking-widest text-secondary hover:text-primary transition-colors duration-300" href="#runway-section">ГАЛЕРЕЯ</a>
+            <a class="font-label-caps text-label-caps uppercase tracking-widest text-secondary hover:text-primary transition-colors duration-300" href="#manifesto-section">МАНИФЕСТ</a>
+        </div>
+        <div class="font-label-caps text-label-caps uppercase tracking-widest text-primary cursor-pointer transition-all duration-200 hover:opacity-70">ИНДЕКС</div>
+    </nav>
+    <main>
+        <!-- HERO -->
+        <section class="min-h-screen flex flex-col md:flex-row pt-20 border-b structural-line">
+            <div class="w-full md:w-1/2 px-margin-edge flex flex-col justify-center py-section-gap border-r structural-line">
+                <h1 class="font-display-lg text-display-lg-mobile md:text-display-lg mb-8 leading-none">
+                    Геометрия<br/>пространства.
+                </h1>
+                <p class="font-body-lg text-body-lg text-secondary max-w-md">
+                    Модульные интерьерные объекты из архитектурного бетона и оружейной стали.
+                </p>
+            </div>
+            <div class="w-full md:w-1/2 relative bg-surface-container overflow-hidden flex items-center justify-center group">
+                <div id="hero-image-mask" class="absolute inset-0 hero-mask-img bg-cover bg-center transition-transform duration-700 group-hover:scale-105" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBZHcS_BRH6m0d4ltBj1NzpsauzE-ySFGJpYqMY8Grd_GIdoZ18_6RKri43wiMeMiE3F6eiLOx1IxylGh5fETuIcfT3hShQ9aC_VMbq30MliIeXW5eTMwBxHrPPrrOhgVANsUipWPmgH_dm513p57tMX0d8XDADJKofJEesjyM9GHtzDtELjF0h8j8iYDx0Do0f7VISeA6qK60QuR7a11_pkUaqgrInpSanjG9hiwEAukp62znJvEWfQ1uBuCSVt6p7yFgUNeYRK73W')"></div>
+                <div class="absolute bottom-6 left-6 font-mono-ui text-mono-ui text-secondary bg-background/80 px-2 py-1 z-10">
+                    C01 // КОНСОЛЬ ТИТАН
+                </div>
+            </div>
+        </section>
+        
+        <!-- MANIFESTO -->
+        <section id="manifesto-section" class="py-section-gap px-margin-edge border-b structural-line bg-surface">
+            <div class="max-w-4xl mx-auto text-center">
+                <div class="font-label-caps text-label-caps uppercase mb-12 tracking-[0.2em] text-secondary">Манифест формы</div>
+                <p id="manifesto-text" class="font-display-lg text-3xl md:text-5xl leading-tight">
+                    Мы верим в честность материала. Бетон не скрывает своих пор, сталь не прячет свой холод. Наши объекты — это диалог между архитектурной массой и пустотой пространства, где каждый миллиметр выверен законами сопромата и эстетикой минимализма.
+                </p>
+            </div>
+        </section>
+        
+        <!-- CONFIGURATOR -->
+        <section id="configurator" class="py-section-gap px-margin-edge border-b structural-line">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+                <div class="md:col-span-4 flex flex-col justify-between">
+                    <div>
+                        <div class="font-label-caps text-label-caps uppercase mb-8 text-secondary">Конфигуратор</div>
+                        <div class="flex flex-col gap-4">
+                            <button id="config-btn-cube" class="w-full text-left p-6 border structural-line font-label-caps text-label-caps uppercase hover:bg-primary hover:text-surface transition-all duration-300 flex justify-between items-center group">
+                                [ Куб M500 ]
+                                <span class="material-symbols-outlined opacity-0 group-hover:opacity-100 transition-opacity">add</span>
+                            </button>
+                            <button id="config-btn-steel" class="w-full text-left p-6 border structural-line font-label-caps text-label-caps uppercase hover:bg-primary hover:text-surface transition-all duration-300 flex justify-between items-center group">
+                                [ Стальная плита ]
+                                <span class="material-symbols-outlined opacity-0 group-hover:opacity-100 transition-opacity">add</span>
+                            </button>
+                            <button id="config-btn-glass" class="w-full text-left p-6 border structural-line font-label-caps text-label-caps uppercase hover:bg-primary hover:text-surface transition-all duration-300 flex justify-between items-center group">
+                                [ Стеклянная арка ]
+                                <span class="material-symbols-outlined opacity-0 group-hover:opacity-100 transition-opacity">add</span>
+                            </button>
+                            <button id="config-btn-clear" class="w-full text-center mt-2 p-4 border border-dashed border-red-500/20 text-red-600/70 hover:border-red-500 hover:text-red-600 transition-colors uppercase font-label-caps text-xs">
+                                [ Очистить подиум ]
+                            </button>
+                        </div>
+                    </div>
+                    <div class="mt-12 pt-8 border-t structural-line">
+                        <div class="font-mono-ui text-mono-ui uppercase text-primary" id="config-status">
+                            Вес: 0 кг // Элементов: 0
+                        </div>
+                    </div>
+                </div>
+                <div class="md:col-span-8 h-[600px] border structural-line bg-surface-container relative flex items-center justify-center overflow-hidden">
+                    <div class="absolute inset-0 opacity-20 pointer-events-none" style="background-image: radial-gradient(#1c1c16 0.5px, transparent 0.5px); background-size: 24px 24px;"></div>
+                    <div class="w-64 h-[450px] border-2 border-dashed border-primary/20 flex items-end justify-center pb-4 transition-all duration-300" id="visual-podium">
+                        <div class="flex flex-col-reverse gap-1 items-center w-full px-4" id="stack-container">
+                            <!-- Configured elements will appear here -->
+                        </div>
+                    </div>
+                    <div id="render-coords" class="absolute top-6 right-6 font-mono-ui text-mono-ui text-secondary text-right">
+                        RENDER_ENGINE_V2.0<br/>
+                        COORD_XYZ: 0.00.0
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- GALLERY: The Runway -->
+        <section id="runway-section" class="py-section-gap border-b structural-line overflow-hidden">
+            <div class="px-margin-edge mb-8 flex justify-between items-end">
+                <h2 class="font-headline-md text-headline-md">The Runway</h2>
+                <div class="font-mono-ui text-mono-ui text-secondary uppercase">Scroll to explore textures —→</div>
+            </div>
+            <div id="runway-track" class="flex overflow-x-auto gap-gutter px-margin-edge hide-scrollbar snap-x snap-mandatory">
+                <div class="flex-none w-[80vw] md:w-[60vw] aspect-[21/9] bg-surface-container snap-center relative">
+                    <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD3vaT1x9_piIPIp2TnJWv6I5D1-L9GAw8OqtWJKnTMRnTLkjXJLMOzO4Lufi-oZRj3iqhueUbm3nrm-wviCSMoBz0ykBdiTfn2s6pnGiZrl_zypNf4e5K7ZuijyolhnJ_t6IRcKu_LsUVPz_UJmjR-S5nrJEl5tE8BpFuwFwHUSJqhGH3VbDChQ_2ERrCTvZfjESFv-eugcKBDVK3I-J32gCpbBbBYkAh3hgDpmUDP7N9bngRyv94hD5qiQpv1Wvh7Xhn4NEGQ4ZzV')"></div>
+                </div>
+                <div class="flex-none w-[80vw] md:w-[60vw] aspect-[21/9] bg-surface-container snap-center relative">
+                    <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC-wPceDQSQW6IxroMYb-1pLXy9VIAjf-egvWE2LYd0nwdf-F6MP-tfQdQMwaa_QbljfHm5o-jhAQ8SSZTSyVVkh91F58tmnXk3FpRxM8gfsk7f9AK3bzCWIAtK9pHumt7uL-cdIR1U-1Ubdqw_UQwzpX0hOM1bZ4TW623rHyzlDGUsLPxX9RUbzlJaJp1AtMPFtfRgRNbId5RWKBVirbEUpffUF4btXUec0zT6S8S-2Ao6bmZKHi8gEsvAeKW24clRbjU7AhzvoHjP')"></div>
+                </div>
+                <div class="flex-none w-[80vw] md:w-[60vw] aspect-[21/9] bg-surface-container snap-center relative">
+                    <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAlqjO3lq64tdhareEy1Ehdta66kvCNlGA2j4Ry4X8do0701OzpxXnejYLXBYlYttxvIKLQrnLY2jaCR9KKlEVDYOTv2Sw44r2eV4bpUMV0v-P4O-PHjNrhX99Z6-NFNSymyT9cA5HZVS6IV6RYjAodnztsV0D3-rldgg84wuEtb1xJBOuGD_M7ChenFvtG8FP5m1NtmQUlKi8NCs3mAPtsz0rmFV-8RyAsdpKLNf4De4Ng0UNpUg2pdxX3aTNO2YJzHjhwUO5CQ8Bn')"></div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- MATERIALS: Bento Grid -->
+        <section class="py-section-gap px-margin-edge border-b structural-line bg-surface-container-low">
+            <div class="font-label-caps text-label-caps uppercase mb-16 text-center tracking-[0.2em]">Техническая карта</div>
+            <div class="grid grid-cols-1 md:grid-cols-12 auto-rows-[300px] gap-gutter">
+                <div class="md:col-span-8 border structural-line bg-surface p-12 flex flex-col justify-between group overflow-hidden relative">
+                    <div class="font-mono-ui text-mono-ui text-secondary">01 /</div>
+                    <div class="z-10">
+                        <h3 class="font-headline-md text-headline-md mb-4">Архитектурный бетон M500</h3>
+                        <p class="font-body-md text-secondary max-w-sm">Высокопрочный состав с добавлением фиброволокна. Ручная шлифовка до состояния шелка.</p>
+                    </div>
+                    <div class="absolute top-0 right-0 w-1/3 h-full bg-cover bg-center grayscale opacity-20 group-hover:opacity-100 transition-opacity duration-500" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDXHp8gO5_OAOF-_4Ru3hDV9umfy4NwU8FuB3jp1SW2BWtpgKrb1l0l9xE1mwvNaQlIR8tm1wPw7fqd6ooN2DpiVrHZiDddr-QHWEX1_IbxAnvm8sjliCE8mAvJvy-FyyD7ANqq6eXOhdhY8CXBRM1f7ZrRUpn-vUc6lwutkCc8DkUP1ViMS3k-d0CRNpbRDi6Y1YSAzzuJZsvZkG9R6xJ902x4d4ugs6TbBkOX3oMkDWWmxb_lbyWFDWEsW7ygYvWbuX15KPpyb4tx')"></div>
+                </div>
+                <div class="md:col-span-4 border structural-line bg-primary p-12 flex flex-col justify-between text-surface">
+                    <div class="font-mono-ui text-mono-ui opacity-50">02 /</div>
+                    <div>
+                        <h3 class="font-headline-sm text-headline-sm mb-4">Закаленное стекло</h3>
+                        <p class="font-body-md opacity-70">12мм оптивайт. Кромка с алмазной полировкой.</p>
+                    </div>
+                </div>
+                <div class="md:col-span-4 border structural-line bg-surface p-12 flex flex-col justify-between group relative overflow-hidden">
+                    <div class="font-mono-ui text-mono-ui text-secondary">03 /</div>
+                    <div class="z-10">
+                        <h3 class="font-headline-sm text-headline-sm mb-4">Шлифованная сталь</h3>
+                        <p class="font-body-md text-secondary">Оружейная сталь с горячим воронением. Защита от окисления.</p>
+                    </div>
+                    <div class="absolute inset-0 bg-cover bg-center opacity-0 group-hover:opacity-10 transition-opacity duration-500" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDf5_OBa_2EIn9ZGSFyOtEgXgLGL8YwubEdCqJd7i5bhrwfOMOU-VyoWDM_r_RM3YeY4B4cZmn3N-DRDrfeTU6Hl0Vl-QRz8z5UI2pn9CkNcJ3FL9jGF2XPzu0cRQTVASyY_4xXzTxK48bSTsgNhYahb8mQ7NXcFPlCMm_SqoPiYPppN0krufTMFSrspRJTVaaQ9MW3AnniLu_R1VNFM2X1aE1jT9NODTEaKjAaYVO-mWeOULRoUujPmvQygksuZ91w7Q-I75ih2V34')"></div>
+                </div>
+                <div class="md:col-span-8 border structural-line bg-surface p-12 flex flex-col justify-center items-center text-center">
+                    <div class="font-label-caps text-label-caps uppercase text-secondary mb-4">Лаборатория</div>
+                    <p class="font-headline-sm italic">"Материал диктует форму. Мы лишь переводим этот диктат на язык интерьера."</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- FOOTER with Inquiry Form -->
+        <footer class="w-full py-section-gap px-margin-edge grid grid-cols-1 md:grid-cols-12 gap-gutter bg-surface-container border-t structural-line">
+            <!-- Inquiry Form -->
+            <div id="inquiry-container" class="md:col-span-6 mb-16 md:mb-0 transition-all duration-500">
+                <h4 class="font-label-caps text-label-caps uppercase mb-12">Architectural Inquiry Form</h4>
+                <form id="inquiry-form" class="space-y-12">
+                    <div class="relative">
+                        <label class="font-label-caps text-label-caps uppercase text-secondary mb-2 block">Ваше имя</label>
+                        <input id="inquiry-name" required class="w-full bg-transparent border-t-0 border-l-0 border-r-0 border-b structural-line focus:ring-0 focus:border-primary transition-colors p-0 pb-2 placeholder:text-secondary/30 font-mono-ui outline-none" placeholder="ИВАН ИВАНОВ" type="text"/>
+                    </div>
+                    <div class="relative">
+                        <label class="font-label-caps text-label-caps uppercase text-secondary mb-2 block">Email</label>
+                        <input id="inquiry-email" required class="w-full bg-transparent border-t-0 border-l-0 border-r-0 border-b structural-line focus:ring-0 focus:border-primary transition-colors p-0 pb-2 placeholder:text-secondary/30 font-mono-ui outline-none" placeholder="HELLO@STUDIO.COM" type="email"/>
+                    </div>
+                    <div class="relative">
+                        <label class="font-label-caps text-label-caps uppercase text-secondary mb-2 block">Описание проекта</label>
+                        <textarea id="inquiry-desc" required class="w-full bg-transparent border-t-0 border-l-0 border-r-0 border-b structural-line focus:ring-0 focus:border-primary transition-colors p-0 pb-2 placeholder:text-secondary/30 font-mono-ui resize-none outline-none" placeholder="ЖИЛОЙ ИНТЕРЬЕР, 120 М2" rows="1"></textarea>
+                    </div>
+                    <button class="font-label-caps text-label-caps uppercase tracking-widest text-primary border-b-2 border-primary pb-1 hover:opacity-70 transition-opacity" type="submit">
+                        ОТПРАВИТЬ ЗАПРОС [ <span class="text-xs">➔</span> ]
+                    </button>
+                </form>
+            </div>
+            <!-- Footer Links & Branding -->
+            <div class="md:col-span-3 md:col-start-8 flex flex-col gap-8">
+                <div class="font-headline-sm text-headline-sm font-bold text-primary">КОНТУР</div>
+                <div class="flex flex-col gap-2">
+                    <a class="font-mono-ui text-mono-ui uppercase text-on-surface-variant hover:text-primary transition-colors" href="#">КОНФИДЕНЦИАЛЬНОСТЬ</a>
+                    <a class="font-mono-ui text-mono-ui uppercase text-on-surface-variant hover:text-primary transition-colors" href="#">КОНТАКТЫ</a>
+                </div>
+            </div>
+            <div class="md:col-span-2 md:col-start-11 flex flex-col gap-8">
+                <div class="font-label-caps text-label-caps uppercase text-secondary">Social</div>
+                <div class="flex flex-col gap-2">
+                    <a class="font-mono-ui text-mono-ui uppercase text-on-surface-variant hover:text-primary transition-colors" href="#">INSTAGRAM</a>
+                    <a class="font-mono-ui text-mono-ui uppercase text-on-surface-variant hover:text-primary transition-colors" href="#">BEHANCE</a>
+                </div>
+            </div>
+            <div class="md:col-span-12 mt-12 pt-8 border-t structural-line flex justify-between items-center">
+                <p class="font-mono-ui text-mono-ui uppercase text-secondary">© 2024 КОНТУР. АРХИТЕКТУРНЫЕ ФОРМЫ.</p>
+                <div class="flex gap-4">
+                    <div class="w-3 h-3 bg-primary"></div>
+                    <div class="w-3 h-3 border border-primary"></div>
+                </div>
+            </div>
+        </footer>
+    </main>
+    <script type="module" src="/src/main.js"></script>
+</body>
+</html>

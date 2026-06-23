@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html class="dark" lang="ru">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>СПЕКТР // ИНСТРУМЕНТ ВВОДА</title>
+    <link href="https://fonts.googleapis.com/css2?family=Anybody:wght@800;900&amp;family=Geist:wght@400;600&amp;family=JetBrains+Mono:wght@500;600&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="/src/style.css"/>
+</head>
+<body class="font-body-main bg-background text-on-surface">
+    <!-- HEADER (TopNavBar) -->
+    <header class="fixed top-0 w-full z-50 flex justify-between items-center px-margin-desktop h-20 bg-background/80 backdrop-blur-xl border-b border-white/10">
+        <div class="flex items-center gap-4">
+            <span class="font-display-xl text-headline-lg tracking-tighter text-on-surface uppercase select-none">СПЕКТР // ИНСТРУМЕНТ</span>
+        </div>
+        <nav class="hidden md:flex gap-12">
+            <a class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-200 font-technical-data text-technical-data" href="#acoustic">Звук</a>
+            <a class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-200 font-technical-data text-technical-data" href="#anatomy">Анатомия</a>
+            <a class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-200 font-technical-data text-technical-data" href="#lab">Лаборатория</a>
+        </nav>
+        <button class="bg-primary-container text-on-primary font-bold px-6 py-3 hover:scale-95 transition-transform duration-100 font-technical-data text-technical-data glow-accent header-cta">
+            СОБРАТЬ СВОЙ ➔
+        </button>
+    </header>
+
+    <main class="pt-20">
+        <!-- HERO SECTION -->
+        <section class="relative min-h-screen flex items-end overflow-hidden px-margin-desktop pb-24 border-b border-white/10">
+            <div class="absolute inset-0 z-0">
+                <div class="w-full h-full bg-cover bg-center opacity-40" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCihwXAf8jIiSgPT2bRzzIUw_Xxbhd-aVUIDMIVlGDSQBVST5hMMTOhxiO8TIusZ-n6m2o-HBnk4FhhTg2E2qj1IqjTaSexCL5OD_Z7DBo3K5ChvfGjJWRXDN1Dw0xzE1jDxzDrIxhP0jFzQtOplt-AtYInnx4p2mwGo1QE28ELfdYNyL3_95H-N7pOlOCo83GN_Ng5DY2sDEg1eLtsOJePwJItJ39zGMICPgex_2JXujXObDCy_-AnHgws-B8L7KDnYQTfARMu_gE')"></div>
+                <div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
+            </div>
+            <div class="relative z-10 max-w-4xl">
+                <h1 class="font-display-xl text-display-xl mb-6 uppercase leading-none tracking-tight">
+                    СПЕКТР //<br/>ИНСТРУМЕНТ ВВОДА
+                </h1>
+                <p class="font-body-large text-body-large text-on-surface-variant max-w-xl mb-12">
+                    Тактильность и акустический резонанс, возведенные в абсолют. Механические клавиатуры из авиационного алюминия.
+                </p>
+                <div class="flex gap-4">
+                    <div class="px-4 py-1 border border-white/20 font-technical-data text-label-sm text-secondary uppercase">Precision CNC 6061</div>
+                    <div class="px-4 py-1 border border-white/20 font-technical-data text-label-sm text-secondary uppercase">Hot-Swap PCB</div>
+                    <div class="px-4 py-1 border border-white/20 font-technical-data text-label-sm text-secondary uppercase">Gasket Mount</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ACOUSTIC TESTER -->
+        <section class="py-32 px-margin-desktop grid grid-cols-1 lg:grid-cols-12 gap-12 border-b border-white/10" id="acoustic">
+            <div class="lg:col-span-4 flex flex-col justify-center">
+                <h2 class="font-headline-lg text-headline-lg uppercase mb-8">СТЕНД АКУСТИКИ</h2>
+                <div class="space-y-4">
+                    <button class="w-full text-left p-8 border border-white/10 hover:border-primary-container group transition-transform active:scale-95 duration-100 switch-btn relative overflow-hidden" data-switch="1">
+                        <div class="flex justify-between items-center pointer-events-none">
+                            <span class="font-technical-data text-body-main group-hover:text-primary">ЛИНЕЙНЫЕ // СМАЗАННЫЕ</span>
+                            <span class="font-technical-data text-primary">[ 1 ]</span>
+                        </div>
+                    </button>
+                    <button class="w-full text-left p-8 border border-white/10 hover:border-primary-container group transition-transform active:scale-95 duration-100 switch-btn bg-surface-container relative overflow-hidden" data-switch="2">
+                        <div class="flex justify-between items-center pointer-events-none">
+                            <span class="font-technical-data text-body-main group-hover:text-primary">ТАКТИЛЬНЫЕ // ТЯЖЕЛЫЕ</span>
+                            <span class="font-technical-data text-primary">[ 2 ]</span>
+                        </div>
+                    </button>
+                    <button class="w-full text-left p-8 border border-white/10 hover:border-primary-container group transition-transform active:scale-95 duration-100 switch-btn relative overflow-hidden" data-switch="3">
+                        <div class="flex justify-between items-center pointer-events-none">
+                            <span class="font-technical-data text-body-main group-hover:text-primary">КЛИКАЮЩИЕ // РЕТРО</span>
+                            <span class="font-technical-data text-primary">[ 3 ]</span>
+                        </div>
+                    </button>
+                </div>
+            </div>
+            <div class="lg:col-span-8 flex items-center justify-center relative overflow-hidden bg-surface-container-lowest border border-white/10 min-h-[400px]">
+                <div class="absolute inset-0 flex items-center justify-center pointer-events-none opacity-20">
+                    <svg class="w-full h-full max-w-md" viewbox="0 0 400 400">
+                        <circle class="text-primary" cx="200" cy="200" fill="none" r="180" stroke="currentColor" stroke-width="0.5"></circle>
+                        <circle class="text-primary" cx="200" cy="200" fill="none" r="140" stroke="currentColor" stroke-width="0.5"></circle>
+                        <circle class="text-primary" cx="200" cy="200" fill="none" r="100" stroke="currentColor" stroke-width="0.5"></circle>
+                    </svg>
+                </div>
+                <div class="text-center z-10 px-12">
+                    <span class="font-technical-data text-label-sm text-primary block mb-2" id="output-status">OUTPUT READY</span>
+                    <div class="h-32 flex items-end justify-center gap-1" id="waveform-container">
+                        <!-- Simulated Waveform Bars -->
+                        <div class="w-1 bg-primary h-12 waveform-bar" style="animation-delay: 0.1s; animation-play-state: paused;"></div>
+                        <div class="w-1 bg-primary h-24 waveform-bar" style="animation-delay: 0.2s; animation-play-state: paused;"></div>
+                        <div class="w-1 bg-primary h-16 waveform-bar" style="animation-delay: 0.3s; animation-play-state: paused;"></div>
+                        <div class="w-1 bg-primary h-32 waveform-bar" style="animation-delay: 0.4s; animation-play-state: paused;"></div>
+                        <div class="w-1 bg-primary h-20 waveform-bar" style="animation-delay: 0.5s; animation-play-state: paused;"></div>
+                        <div class="w-1 bg-primary h-28 waveform-bar" style="animation-delay: 0.6s; animation-play-state: paused;"></div>
+                        <div class="w-1 bg-primary h-12 waveform-bar" style="animation-delay: 0.7s; animation-play-state: paused;"></div>
+                        <div class="w-1 bg-primary h-18 waveform-bar" style="animation-delay: 0.8s; animation-play-state: paused;"></div>
+                    </div>
+                    <p class="font-technical-data text-on-surface-variant mt-8 uppercase tracking-widest" id="acoustic-label">Select switch type to resonance test</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ANATOMY EXPLODED VIEW -->
+        <section class="scroll-reveal-container" id="anatomy">
+            <div class="sticky-anatomy">
+                <div class="container mx-auto grid grid-cols-12 items-center px-margin-desktop w-full">
+                    <div class="col-span-12 lg:col-span-7 relative h-[500px]" id="exploded-view-container">
+                        <!-- Layer 1: Top Case -->
+                        <img alt="Layer 1: Top Case" class="anatomy-layer" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6TKTiv791-92r7dqEzTPTBozmmHWykOS5ntVoZXtXI5Suou3P_eVWSXg1liFjohUUWqyd1-zCIuR3-JnG2GY_ZsELQvFnSX6lqUBf7R55CdAmFj-T89fBU1CxEBeNMhnMdtiFIauUqD-KLvoekupg9xOWVTgtqarAtkdo9dX3I6Di8WeYGEJLpZ73Eph0i3FOmWB5x-Ic8VMXjK2wKvMTsuCEmwYcoyiyns7gLjKf47ye2qwr6XAHb-sB-jdUWfVljeUiF2YQcX8" style="clip-path: inset(0% 0% 80% 0%); z-index: 15;"/>
+                        <!-- Layer 2: Keycaps -->
+                        <img alt="Layer 2: Keycaps" class="anatomy-layer" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6TKTiv791-92r7dqEzTPTBozmmHWykOS5ntVoZXtXI5Suou3P_eVWSXg1liFjohUUWqyd1-zCIuR3-JnG2GY_ZsELQvFnSX6lqUBf7R55CdAmFj-T89fBU1CxEBeNMhnMdtiFIauUqD-KLvoekupg9xOWVTgtqarAtkdo9dX3I6Di8WeYGEJLpZ73Eph0i3FOmWB5x-Ic8VMXjK2wKvMTsuCEmwYcoyiyns7gLjKf47ye2qwr6XAHb-sB-jdUWfVljeUiF2YQcX8" style="clip-path: inset(20% 0% 60% 0%); z-index: 14;"/>
+                        <!-- Layer 3: Plate -->
+                        <img alt="Layer 3: Plate" class="anatomy-layer" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6TKTiv791-92r7dqEzTPTBozmmHWykOS5ntVoZXtXI5Suou3P_eVWSXg1liFjohUUWqyd1-zCIuR3-JnG2GY_ZsELQvFnSX6lqUBf7R55CdAmFj-T89fBU1CxEBeNMhnMdtiFIauUqD-KLvoekupg9xOWVTgtqarAtkdo9dX3I6Di8WeYGEJLpZ73Eph0i3FOmWB5x-Ic8VMXjK2wKvMTsuCEmwYcoyiyns7gLjKf47ye2qwr6XAHb-sB-jdUWfVljeUiF2YQcX8" style="clip-path: inset(40% 0% 40% 0%); z-index: 13;"/>
+                        <!-- Layer 4: Switches -->
+                        <img alt="Layer 4: Switches" class="anatomy-layer" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6TKTiv791-92r7dqEzTPTBozmmHWykOS5ntVoZXtXI5Suou3P_eVWSXg1liFjohUUWqyd1-zCIuR3-JnG2GY_ZsELQvFnSX6lqUBf7R55CdAmFj-T89fBU1CxEBeNMhnMdtiFIauUqD-KLvoekupg9xOWVTgtqarAtkdo9dX3I6Di8WeYGEJLpZ73Eph0i3FOmWB5x-Ic8VMXjK2wKvMTsuCEmwYcoyiyns7gLjKf47ye2qwr6XAHb-sB-jdUWfVljeUiF2YQcX8" style="clip-path: inset(60% 0% 20% 0%); z-index: 12;"/>
+                        <!-- Layer 5: PCB & Bottom Case -->
+                        <img alt="Layer 5: PCB & Bottom Case" class="anatomy-layer" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6TKTiv791-92r7dqEzTPTBozmmHWykOS5ntVoZXtXI5Suou3P_eVWSXg1liFjohUUWqyd1-zCIuR3-JnG2GY_ZsELQvFnSX6lqUBf7R55CdAmFj-T89fBU1CxEBeNMhnMdtiFIauUqD-KLvoekupg9xOWVTgtqarAtkdo9dX3I6Di8WeYGEJLpZ73Eph0i3FOmWB5x-Ic8VMXjK2wKvMTsuCEmwYcoyiyns7gLjKf47ye2qwr6XAHb-sB-jdUWfVljeUiF2YQcX8" style="clip-path: inset(80% 0% 0% 0%); z-index: 11;"/>
+                    </div>
+                    <div class="col-span-12 lg:col-span-5 space-y-8 pl-0 lg:pl-12" id="layer-callouts-container">
+                        <div class="border-l-2 border-primary pl-8 layer-callout" data-layer="0">
+                            <span class="font-technical-data text-label-sm text-primary">LAYER 01</span>
+                            <h3 class="font-headline-lg text-headline-lg uppercase mt-2">Верхний корпус</h3>
+                        </div>
+                        <div class="border-l-2 border-white/10 pl-8 layer-callout opacity-30" data-layer="1">
+                            <span class="font-technical-data text-label-sm text-on-secondary-container">LAYER 02</span>
+                            <h3 class="font-headline-lg text-headline-lg uppercase mt-2">Cherry кейкапы</h3>
+                        </div>
+                        <div class="border-l-2 border-white/10 pl-8 layer-callout opacity-30" data-layer="2">
+                            <span class="font-technical-data text-label-sm text-on-secondary-container">LAYER 03</span>
+                            <h3 class="font-headline-lg text-headline-lg uppercase mt-2">Латунная пластина</h3>
+                        </div>
+                        <div class="border-l-2 border-white/10 pl-8 layer-callout opacity-30" data-layer="3">
+                            <span class="font-technical-data text-label-sm text-on-secondary-container">LAYER 04</span>
+                            <h3 class="font-headline-lg text-headline-lg uppercase mt-2">Механические свичи</h3>
+                        </div>
+                        <div class="border-l-2 border-white/10 pl-8 layer-callout opacity-30" data-layer="4">
+                            <span class="font-technical-data text-label-sm text-on-secondary-container">LAYER 05</span>
+                            <h3 class="font-headline-lg text-headline-lg uppercase mt-2">Плата PCB & База</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- RGB LAB -->
+        <section class="py-32 px-margin-desktop border-t border-b border-white/10" id="lab">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
+                <div class="lg:col-span-6">
+                    <h2 class="font-display-xl text-headline-lg uppercase mb-12">ЛАБОРАТОРИЯ СВЕТА</h2>
+                    <div class="space-y-12">
+                        <div class="space-y-4">
+                            <label class="font-technical-data text-label-sm uppercase flex justify-between">
+                                Hue <span id="hue-value">24°</span>
+                            </label>
+                            <input id="hue-slider" class="w-full accent-primary bg-surface-container h-1 appearance-none cursor-pointer" type="range" min="0" max="360" value="24"/>
+                        </div>
+                        <div class="space-y-4">
+                            <label class="font-technical-data text-label-sm uppercase flex justify-between">
+                                Saturation <span id="saturation-value">100%</span>
+                            </label>
+                            <input id="saturation-slider" class="w-full accent-primary bg-surface-container h-1 appearance-none cursor-pointer" type="range" min="0" max="100" value="100"/>
+                        </div>
+                        <div class="flex gap-4">
+                            <button id="preset-breathing" class="flex-1 py-4 border border-white/10 text-on-surface-variant font-technical-data text-technical-data uppercase transition-all duration-200">Дыхание</button>
+                            <button id="preset-static" class="flex-1 py-4 border border-primary text-primary font-technical-data text-technical-data uppercase glow-accent transition-all duration-200">Статика</button>
+                            <button id="preset-wave" class="flex-1 py-4 border border-white/10 text-on-surface-variant font-technical-data text-technical-data uppercase transition-all duration-200">Волна</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:col-span-6 flex items-center justify-center p-12 bg-surface-container-low border border-white/10">
+                    <div class="relative w-full max-w-md aspect-square bg-surface flex items-center justify-center p-8 architectural-border" id="glow-panel-wrapper">
+                        <div class="absolute inset-0 opacity-10" id="glow-radial" style="background-image: radial-gradient(circle at center, var(--accent-color) 0%, transparent 70%);"></div>
+                        <div class="w-full h-1/2 border border-primary flex items-center justify-center relative overflow-hidden" id="glow-indicator">
+                            <div class="absolute inset-0 bg-primary/10"></div>
+                            <span class="font-technical-data text-primary text-headline-lg-mobile select-none z-10 text-center uppercase tracking-widest px-4">ACTIVE UNDERGLOW</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TECH SPECS -->
+        <section class="py-32 px-margin-desktop overflow-hidden">
+            <h2 class="font-headline-lg text-headline-lg uppercase mb-16">ТЕХНИЧЕСКИЙ ПАСПОРТ</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter bg-white/10 border border-white/10" id="specs-grid">
+                <div class="bg-background p-8 border border-white/10 spec-card">
+                    <span class="font-technical-data text-label-sm text-secondary uppercase block mb-4">Material</span>
+                    <p class="font-display-xl text-headline-lg-mobile uppercase">CNC 6061-T6</p>
+                </div>
+                <div class="bg-background p-8 border border-white/10 spec-card">
+                    <span class="font-technical-data text-label-sm text-secondary uppercase block mb-4">Mount Type</span>
+                    <p class="font-display-xl text-headline-lg-mobile uppercase">Isol-Gasket</p>
+                </div>
+                <div class="bg-background p-8 border border-white/10 spec-card">
+                    <span class="font-technical-data text-label-sm text-secondary uppercase block mb-4">Connectivity</span>
+                    <p class="font-display-xl text-headline-lg-mobile uppercase">USB-C Pro</p>
+                </div>
+                <div class="bg-background p-8 border border-white/10 spec-card">
+                    <span class="font-technical-data text-label-sm text-secondary uppercase block mb-4">Polling Rate</span>
+                    <p class="font-display-xl text-headline-lg-mobile uppercase">8000 Hz</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="w-full px-margin-desktop py-16 grid grid-cols-1 md:grid-cols-2 gap-grid-unit border-t border-white/10 bg-background">
+        <div>
+            <div class="mb-12">
+                <h3 class="font-headline-lg text-headline-lg uppercase mb-8">ОФОРМИТЬ ПРЕДЗАКАЗ</h3>
+                <form class="space-y-8 max-w-md" id="preorder-form">
+                    <div>
+                        <input id="preorder-email" class="w-full bg-transparent border-t-0 border-x-0 border-b border-white/20 py-4 font-technical-data text-body-main placeholder:text-white/20 focus:ring-0 uppercase" placeholder="EMAIL ADDRESS" type="email" required/>
+                    </div>
+                    <button type="submit" class="bg-white text-background w-full py-5 font-technical-data text-technical-data font-bold uppercase hover:bg-primary hover:text-white transition-colors duration-150">
+                        ОТПРАВИТЬ [ ENTER ]
+                    </button>
+                </form>
+            </div>
+            <p class="font-label-sm text-label-sm text-on-secondary-container">© 2026 SPECTR (СПЕКТР). ВСЕ ПРАВА ЗАЩИЩЕНЫ. ПРЕЦИЗИОННАЯ ИНЖЕНЕРИЯ.</p>
+        </div>
+        <div class="flex flex-col md:items-end justify-between">
+            <div class="flex gap-12 font-label-sm text-label-sm">
+                <a class="text-on-secondary-container hover:text-on-surface transition-colors uppercase" href="#">Конфиденциальность</a>
+                <a class="text-on-secondary-container hover:text-on-surface transition-colors uppercase" href="#">Условия</a>
+                <a class="text-on-secondary-container hover:text-on-surface transition-colors uppercase" href="#">Доставка</a>
+                <a class="text-on-secondary-container hover:text-on-surface transition-colors uppercase" href="#">Контакты</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Pre-Order Confirmation Modal -->
+    <div id="preorder-modal" class="fixed inset-0 bg-[#000000]/80 backdrop-blur-md z-[110] flex items-center justify-center p-4 hidden">
+        <div class="w-full max-w-md bg-surface border border-white/10 p-8 relative shadow-[0_0_30px_rgba(249,115,22,0.15)] architectural-border">
+            <button id="close-preorder-modal" class="absolute top-4 right-4 text-on-surface hover:text-primary transition-colors flex items-center justify-center w-8 h-8 border border-white/10 bg-background hover:scale-95 duration-100" aria-label="Close modal">
+                <span class="material-symbols-outlined text-sm font-bold">close</span>
+            </button>
+            <div class="space-y-6 text-center">
+                <div class="w-16 h-16 border border-primary glow-accent text-primary rounded-none flex items-center justify-center mx-auto mb-4 animate-pulse">
+                    <span class="material-symbols-outlined text-3xl">done</span>
+                </div>
+                <span class="font-technical-data text-primary text-xs uppercase tracking-widest bg-primary/10 px-3 py-1 border border-primary/20 inline-block">[ INVOICE_GENERATED ]</span>
+                <h4 class="font-headline-lg text-headline-lg-mobile uppercase mt-4">ПРЕДЗАКАЗ ПРИНЯТ</h4>
+                <p class="font-body-main text-on-surface-variant">Ваш инвойс сформирован и сохранен. Ожидайте подтверждения на почту в течение 24 часов.</p>
+                <button id="close-modal-btn" class="w-full py-4 bg-white text-background font-technical-data text-technical-data font-bold uppercase hover:bg-primary hover:text-white transition-colors duration-150">
+                    ОТЛИЧНО
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+</body>
+</html>

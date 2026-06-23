@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    background-color: #fdf9f0;
+    color: #1c1c16;
+    -webkit-font-smoothing: antialiased;
+}
+
+.structural-line {
+    border-color: rgba(28, 28, 22, 0.1);
+}
+
+.material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+}
+
+::-webkit-scrollbar {
+    height: 4px;
+    width: 4px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #1c1c16;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+.hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+/* Scroll Photo-Masking Expanse with GPU Acceleration */
+.hero-mask-img {
+    will-change: clip-path, transform;
+    clip-path: inset(10%);
+    transition: clip-path 0.1s ease-out, transform 0.1s ease-out;
+}
+
+/* Configurator Stacked blocks drop transitions */
+.config-block {
+    opacity: 0;
+    transform: translateY(-300px);
+    transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.4s ease-out;
+}
+
+.config-block.dropped {
+    opacity: 1;
+    transform: translateY(0);
+}

@@ -36,12 +36,18 @@ jobs:
           npm ci --prefix nil
           npm ci --prefix balance
           npm ci --prefix synapse
+          npm ci --prefix kontur
+          npm ci --prefix cluster
+          npm ci --prefix spectr
           
       - name: Build production bundle
         run: |
           npm run build --prefix nil
           npm run build --prefix balance
           npm run build --prefix synapse
+          npm run build --prefix kontur
+          npm run build --prefix cluster
+          npm run build --prefix spectr
           mkdir -p dist
           mkdir -p dist/nil
           cp -r nil/dist/* dist/nil/
@@ -49,6 +55,12 @@ jobs:
           cp -r balance/dist/* dist/balance/
           mkdir -p dist/synapse
           cp -r synapse/dist/* dist/synapse/
+          mkdir -p dist/kontur
+          cp -r kontur/dist/* dist/kontur/
+          mkdir -p dist/cluster
+          cp -r cluster/dist/* dist/cluster/
+          mkdir -p dist/spectr
+          cp -r spectr/dist/* dist/spectr/
           cp index.html dist/index.html
         
       - name: Setup Pages
